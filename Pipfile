@@ -7,8 +7,9 @@ verify_ssl = true
 black = "==18.9b0"
 pylint = "*"
 pytest = "*"
-sphinx = "*"
 pytest-cov = "*"
+codecov = "*"
+sphinx = "*"
 
 [packages]
 colorama = "*"
