@@ -30,7 +30,17 @@ jobs:
           name: run tests
           command: |
             mkdir -p test-results/pytest
-            pipenv run pytest -v --junit-xml=test-results/pytest/results.xml
+            pipenv run pytest -v --junit-xml=test-results/pytest/results.xml --cov=./
+            pipenv run coverage -m pytest
+            pipenv run coverage report
+            pipenv run coverage html
             pipenv run pylint playing_cards_terminal --exit-zero
       - store_test_results:
           path: test-results
+      - store_artifacts:
+          path: htmlcov
+      # Step 5: post results to codecov
+      - run:
+          name: post to codecov
+          command: |
+            codecov
