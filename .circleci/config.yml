@@ -32,7 +32,7 @@ jobs:
             mkdir -p test-results/pytest
             pipenv run pytest -v --junit-xml=test-results/pytest/results.xml --cov=./
             pipenv run coverage html
-            pipenv run pylint playing_cards_terminal --exit-zero
+            pipenv run pylint TerminalPlayingCards --exit-zero
       - store_test_results:
           path: test-results
       - store_artifacts:
