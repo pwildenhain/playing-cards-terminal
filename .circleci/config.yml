@@ -31,8 +31,6 @@ jobs:
           command: |
             mkdir -p test-results/pytest
             pipenv run pytest -v --junit-xml=test-results/pytest/results.xml --cov=./
-            pipenv run coverage -m pytest
-            pipenv run coverage report
             pipenv run coverage html
             pipenv run pylint playing_cards_terminal --exit-zero
       - store_test_results:
