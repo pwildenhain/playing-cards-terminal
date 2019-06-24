@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../TerminalPlayingCards'))
 
 
 # -- Project information -----------------------------------------------------
@@ -31,6 +31,10 @@ release = '0.0.0.9000'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    # Automatic generation of docs based on docstrings
+    'sphinx.ext.autodoc',
+    # Google-style docstrings
+    'sphinx.ext.napoleon'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
