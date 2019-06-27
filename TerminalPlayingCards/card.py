@@ -4,8 +4,8 @@
 # pylint: disable=missing-docstring
 from functools import total_ordering
 from colorama import init
-from utils import convert_layers_to_string
-from config import (
+from TerminalPlayingCards.utils import convert_layers_to_string
+from TerminalPlayingCards.config import (
     SUIT_SYMBOL_DICT,
     CARD_FACE_DICT,
     CARD_BACK_STYLE,

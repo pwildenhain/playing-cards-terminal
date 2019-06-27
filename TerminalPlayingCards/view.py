@@ -7,7 +7,7 @@
 # pylint: disable=missing-docstring
 
 from colorama import Style
-from utils import convert_layers_to_string
+from TerminalPlayingCards.utils import convert_layers_to_string
 
 
 class View:
